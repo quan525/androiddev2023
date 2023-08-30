@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function clickfunc(){
+            document.getElementById("demo").innerHTML = "Hello"
+        }
+    </script>
+</head>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<form action="/" method="post">
+  <input type="text" name="fname" required>
+  <input type="submit" value="Submit">
+</form>
+
+<button onclick="clickfunc()" type="button">click button</button>
+<p id="demo" onclick="clickfunc()"  >click here </p>
+
+<form name="myForm">
+  <input type="radio" name="radioGroup" value="option1"> Option 1<br>
+  <input type="radio" name="radioGroup" value="option2"> Option 2<br>
+  <input type="radio" name="radioGroup" value="option3"> Option 3<br>
+</form>
+<script>
+var radioButtons = document.forms["myForm"].elements["radioGroup"];
+var messageDiv = document.getElementById("message");
+
+// Add click event listener to each radio button
+for (var i = 0; i < radioButtons.length; i++) {
+  radioButtons[i].addEventListener("click", function() {
+    var index = Array.from(radioButtons).indexOf(this);
+    var checked = this.checked;
+
+    if (checked) {
+      messageDiv.innerHTML = "Radio button " + index + " is checked.";
+    } else {
+      messageDiv.innerHTML = "Radio button " + index + " is not checked.";
+    }
+  });
+}
+
+</script>
+
+
+</body>
+</html>
