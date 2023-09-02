@@ -9,22 +9,47 @@
     <include android:id="@+id/toolbar"
         layout="@layout/toolbar"></include>
     <!-- res/layout/activity_weather.xml -->
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center">
 
-        <!-- Add your WeatherFragment -->
-        <fragment
-            android:id="@+id/weatherFragment"
-            android:name="vn.edu.usth.weather.WeatherFragment"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        <!-- Add your ForecastFragment or other content here -->
+            <fragment
+                android:id="@+id/weather_fragment"
+                android:name="vn.edu.usth.weather.WeatherFragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
+            <!-- Add any other views or widgets here to link them vertically -->
+
+        </LinearLayout>
+
+        <!-- Second Fragment with equal width and linked vertically -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/fragment_forecast"
+                android:name="vn.edu.usth.weather.ForecastFragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Add any other views or widgets here to link them vertically -->
+
+        </LinearLayout>
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

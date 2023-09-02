@@ -2,6 +2,7 @@ package vn.edu.usth.weather;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.annotation.Nullable;
@@ -21,6 +22,8 @@ public class WeatherActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate() called");
         ForecastFragment firstFragment = new ForecastFragment();
         Toolbar toolbar = findViewById(R.id.toolbar);
+
+
         setSupportActionBar(toolbar);
         // Add the fragment to the 'container' FrameLayout
         getSupportFragmentManager().beginTransaction().add(
