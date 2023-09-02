@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#1E90FF">
-    <RelativeLayout
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/usth_toolbar"
+    android:elevation="4dp"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+    >
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </ImageView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </TextView>
-    </RelativeLayout>
-</Toolbar>
+        android:layout_height="wrap_content"
+        android:text="USTH weather"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"></TextView>
+</androidx.appcompat.widget.Toolbar>

@@ -6,6 +6,7 @@ import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -19,6 +20,8 @@ public class WeatherActivity extends AppCompatActivity {
         setContentView(R.layout.activity_weather);
         Log.i(TAG, "onCreate() called");
         ForecastFragment firstFragment = new ForecastFragment();
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         // Add the fragment to the 'container' FrameLayout
         getSupportFragmentManager().beginTransaction().add(
                 R.id.container, firstFragment).commit();

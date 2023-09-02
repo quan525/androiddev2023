@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeatherFragment">
+
+    <RelativeLayout
+        android:layout_width="306dp"
+        android:layout_height="455dp"
+        android:background="@color/pale_green"> <!-- Green background color -->
+
+        <!-- Add your ImageView in the center -->
+        <ImageView
+            android:id="@+id/weatherImageView"
+            android:layout_width="206dp"
+            android:layout_height="370dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/mutiple_cloud" />
+
+        <!-- Add your weather information views around the ImageView if needed -->
+
+    </RelativeLayout>
+</FrameLayout>

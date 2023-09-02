@@ -6,6 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".WeatherActivity"
     android:id="@+id/container">
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar"></include>
+    <!-- res/layout/activity_weather.xml -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Add your WeatherFragment -->
+        <fragment
+            android:id="@+id/weatherFragment"
+            android:name="vn.edu.usth.weather.WeatherFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Add your ForecastFragment or other content here -->
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
