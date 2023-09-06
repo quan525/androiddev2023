@@ -6,20 +6,23 @@
     tools:context=".WeatherFragment">
 
     <RelativeLayout
-        android:layout_width="342dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_gravity="center"
-        android:background="@color/pale_green">
+        android:background="@drawable/frame"
+        android:layout_width="334dp"
+        android:layout_height="218dp"
+        android:layout_marginLeft="30dp"
+        >
+
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:text="12C"></TextView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -32,6 +35,7 @@
             android:layout_height="223dp"
             android:layout_centerInParent="true"
             android:src="@drawable/mutiple_cloud" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
